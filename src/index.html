@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos de Ordenamiento</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Algoritmos de Ordenamiento</h1>
+    </div>
+    <div class="container">
+        <!-- Gráfico de comparación Array vs LinkedList -->
+        <div class="graph">
+            <h2>Comparación de Tiempo: Array vs LinkedList</h2>
+            <p id="arrayVsLinkedListText"></p>
+            <canvas id="arrayVsLinkedListChart" width="400" height="200"></canvas>
+            <canvas id="sortMethodsChart" width="400" height="200"></canvas>
+            
+        </div>
+
+        <!-- Gráfico de comparación Bubble, Merge, Radix -->
+        <div class="graph">
+            <h2>Comparación de Tiempo: Bubble, Merge y Radix</h2>
+            <p id="sortMethodsText"></p>
+            <canvas id="sortMethodsChart" width="600" height="400"></canvas>
+        </div>
+
+        <div class="illustrations">
+            <div class="method" id="bubbleSort" onclick="openModal('bubbleSortModal')">
+                <div class="label">Bubble Sort</div>
+                <div class="illustration bubbleSortIllustration"></div>
+            </div>
+            <div class="method" id="mergeSort" onclick="openModal('mergeSortModal')">
+                <div class="label">Merge Sort</div>
+                <div class="illustration mergeSortIllustration"></div>
+            </div>
+            <div class="method" id="radixSort" onclick="openModal('radixSortModal')">
+                <div class="label">Radix Sort</div>
+                <div class="illustration radixSortIllustration"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="bubbleSortModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bubbleSortModal')">&times;</span>
+            <h2>Bubble Sort</h2>
+            <p>Bubble Sort es un algoritmo de clasificación simple que recorre repetidamente la lista, compara elementos adyacentes y los intercambia si están en el orden incorrecto.</p>
+            <img src="./assets/OIP (1).jpg" alt="Bubble Sort">
+        </div>
+    </div>
+
+    <div id="mergeSortModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mergeSortModal')">&times;</span>
+            <h2>Merge Sort</h2>
+            <p>Merge Sort es un algoritmo de divide y vencerás que divide la lista en mitades iguales hasta que tenga elementos individuales y luego los fusiona de manera ordenada.</p>
+            <img src="./assets/R.png" alt="Merge Sort">
+        </div>
+    </div>
+
+    <div id="radixSortModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('radixSortModal')">&times;</span>
+            <h2>Radix Sort</h2>
+            <p>Radix Sort es un algoritmo de clasificación no comparativo que ordena los números procesando dígitos individuales.</p>
+            <img src="./assets/R (1).jpg" alt="Radix Sort">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../sccript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./controllers/script.js"></script>
+</body>
+</html>
